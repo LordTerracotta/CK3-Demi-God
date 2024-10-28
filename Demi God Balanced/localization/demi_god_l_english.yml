@@ -1,0 +1,8 @@
+﻿l_english:
+ trait_demi_god:0 "Demi-God"
+ trait_demi_god_desc:0 "This character was born of the union between a true god and a mortal. Being the child of a god grants them abilities beyond that of a mere mortal"
+ trait_demi_god_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] was born of the union between a true god and a mortal. Being the child of a god grants them abilities beyond that of a mere mortal"
+
+ trait_demi_god_descendant:0 "Demi-God Descendant"
+ trait_demi_god_descendant_desc:0 "This character is a direct descendant of a Demi-God."
+ trait_demi_god_descendant_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is a direct descendant of a Demi-God."

@@ -1,0 +1,49 @@
+﻿namespace = demi_god_events
+
+# Child of Saoshyant's line gains proper trait (fired on creation and on_birth).
+demi_god_event.0001 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				exists = mother
+				mother = {
+					OR = {
+						has_trait = demi_god
+					}
+				}
+			}
+			AND = {
+				exists = father
+				father = {
+					OR = {
+						has_trait = demi_god
+					}
+				}
+			}
+			AND = {
+				exists = mother
+				exists = father
+				mother = {
+						has_trait = demi_god_descendant
+				}
+				father = {
+						has_trait = demi_god_descendant
+				}
+			}
+		}
+		NOR = {
+			has_trait = demi_god # Just in case the tree was horribly tangled...
+			has_trait = demi_god_descendant
+		}
+	}
+
+	immediate = {
+		add_trait = demi_god_descendant
+		every_child = {
+			trigger_event = demi_god_event.0001
+		}
+	}
+}
