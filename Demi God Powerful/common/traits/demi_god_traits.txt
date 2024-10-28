@@ -1,0 +1,98 @@
+﻿# Zoroastrian version of the Savior-trait.
+demi_god = {
+	category = fame
+	opposites = {
+		demi_god_descendant
+	}
+	physical = yes
+	inherit_chance = 1
+	diplomacy = 100
+	martial = 100
+	stewardship = 100
+	intrigue = 100
+	learning = 100
+	prowess = 100
+	fertility = -.20
+	health = 1.5
+	
+	life_expectancy = 50
+	years_of_fertility = 100
+	set_immortal_age = 35
+	
+	stress_gain_mult = 0.1
+	inbreeding_chance = -0.8
+	same_opinion = -10
+	opposite_opinion = 10
+	
+	same_faith_opinion = 20
+	clergy_opinion = 10
+	zealot_opinion = 10
+	monthly_piety_gain_mult = 0.2
+	faith_conversion_piety_cost_mult = -0.1
+	build_gold_cost = 0.1
+	
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 500
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_demi_god_desc
+			}
+			desc = trait_demi_god_character_desc
+		}
+	}
+
+	ai_zeal = 100
+}
+
+# Zoroastrian version of the Divine Blood-trait.
+demi_god_descendant = {
+	category = fame
+	opposites = {
+		demi_god
+	}
+	inherit_chance = 1
+	physical = yes
+	diplomacy = 50
+	martial = 50
+	stewardship = 50
+	intrigue = 50
+	learning = 50
+	prowess = 50
+	fertility = -.10
+	health = .75
+	
+	life_expectancy = 25
+	years_of_fertility = 50
+	set_immortal_age = 45
+	
+	stress_gain_mult = 0.05
+	inbreeding_chance = -0.2
+	same_opinion = 10
+	
+	same_faith_opinion = 10
+	clergy_opinion = 10
+	zealot_opinion = 10
+	build_gold_cost = 0.05
+	
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 400
+
+	opposite_opinion = -10
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_demi_god_descendant_desc
+			}
+			desc = trait_demi_god_descendant_character_desc
+		}
+	}
+}
